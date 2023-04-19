@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.19)  14 APR 2023 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.19)  19 APR 2023 16:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1223,51 +1223,33 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 9
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 3088) in paragraph at lines 109--110
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+
+ []
+
+
+Underfull \hbox (badness 3088) in paragraph at lines 111--112
 []\OT1/ptm/m/n/10 Para es-te ex-pe-ri-men-to se uti-liz[]o co-mo gu[]^^Pa el \O
 T1/ptm/m/it/10 script
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
-
-Underfull \vbox (badness 1043) has occurred while \output is active []
-
-<./Imagenes/file1.pdf, id=36, 569.12625pt x 388.45125pt>
+<./Imagenes/file1.pdf, id=43, 569.12625pt x 388.45125pt>
 File: ./Imagenes/file1.pdf Graphic file (type pdf)
 <use ./Imagenes/file1.pdf>
-Package pdftex.def Info: ./Imagenes/file1.pdf  used on input line 158.
-(pdftex.def)             Requested size: 256.10445pt x 174.80144pt.
-
-Overfull \hbox (4.10445pt too wide) in paragraph at lines 158--159
- [][] 
- []
-
-<./Imagenes/file2.pdf, id=37, 569.12625pt x 388.45125pt>
+Package pdftex.def Info: ./Imagenes/file1.pdf  used on input line 162.
+(pdftex.def)             Requested size: 227.64647pt x 155.37773pt.
+<./Imagenes/file2.pdf, id=44, 569.12625pt x 388.45125pt>
 File: ./Imagenes/file2.pdf Graphic file (type pdf)
 <use ./Imagenes/file2.pdf>
-Package pdftex.def Info: ./Imagenes/file2.pdf  used on input line 164.
-(pdftex.def)             Requested size: 256.10445pt x 174.80144pt.
+Package pdftex.def Info: ./Imagenes/file2.pdf  used on input line 168.
+(pdftex.def)             Requested size: 227.64647pt x 155.37773pt.
 
-Overfull \hbox (4.10445pt too wide) in paragraph at lines 164--165
- [][] 
- []
-
-<./Imagenes/file3.pdf, id=38, 569.12625pt x 388.45125pt>
-File: ./Imagenes/file3.pdf Graphic file (type pdf)
-<use ./Imagenes/file3.pdf>
-Package pdftex.def Info: ./Imagenes/file3.pdf  used on input line 170.
-(pdftex.def)             Requested size: 256.10445pt x 174.80144pt.
-
-Overfull \hbox (4.10445pt too wide) in paragraph at lines 170--171
- [][] 
- []
-
-
-Underfull \vbox (badness 5862) has occurred while \output is active []
+Underfull \vbox (badness 6110) has occurred while \output is active []
 
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -1277,46 +1259,33 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.173         \end{figure}
-                          pdfTeX warning (ext4): destination with the same iden
-tifier (name{figure.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.173         \end{figure}
-                           <./Imagenes/file1.pdf, page is rotated 90 degrees>]
-<./Imagenes/file4.pdf, id=102, 569.12625pt x 388.45125pt>
+l.171         \end{figure}
+                          ]
+<./Imagenes/file3.pdf, id=76, 569.12625pt x 388.45125pt>
+File: ./Imagenes/file3.pdf Graphic file (type pdf)
+<use ./Imagenes/file3.pdf>
+Package pdftex.def Info: ./Imagenes/file3.pdf  used on input line 174.
+(pdftex.def)             Requested size: 227.64647pt x 155.37773pt.
+<./Imagenes/file4.pdf, id=77, 569.12625pt x 388.45125pt>
 File: ./Imagenes/file4.pdf Graphic file (type pdf)
 <use ./Imagenes/file4.pdf>
-Package pdftex.def Info: ./Imagenes/file4.pdf  used on input line 176.
-(pdftex.def)             Requested size: 256.10445pt x 174.80144pt.
-
-Overfull \hbox (4.10445pt too wide) in paragraph at lines 176--177
- [][] 
- []
-
-<./Imagenes/file5.pdf, id=103, 569.12625pt x 388.45125pt>
+Package pdftex.def Info: ./Imagenes/file4.pdf  used on input line 180.
+(pdftex.def)             Requested size: 227.64647pt x 155.37773pt.
+<./Imagenes/file5.pdf, id=78, 569.12625pt x 388.45125pt>
 File: ./Imagenes/file5.pdf Graphic file (type pdf)
 <use ./Imagenes/file5.pdf>
-Package pdftex.def Info: ./Imagenes/file5.pdf  used on input line 182.
-(pdftex.def)             Requested size: 256.10445pt x 174.80144pt.
+Package pdftex.def Info: ./Imagenes/file5.pdf  used on input line 186.
+(pdftex.def)             Requested size: 227.64647pt x 155.37773pt.
 
-Overfull \hbox (4.10445pt too wide) in paragraph at lines 182--183
- [][] 
- []
+Underfull \vbox (badness 7486) has occurred while \output is active []
 
-<./Imagenes/file6.pdf, id=104, 569.12625pt x 388.45125pt>
+<./Imagenes/file6.pdf, id=79, 569.12625pt x 388.45125pt>
 File: ./Imagenes/file6.pdf Graphic file (type pdf)
 <use ./Imagenes/file6.pdf>
-Package pdftex.def Info: ./Imagenes/file6.pdf  used on input line 188.
-(pdftex.def)             Requested size: 256.10445pt x 174.80144pt.
+Package pdftex.def Info: ./Imagenes/file6.pdf  used on input line 192.
+(pdftex.def)             Requested size: 227.64647pt x 155.37773pt.
 
-Overfull \hbox (4.10445pt too wide) in paragraph at lines 188--189
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 []\OT1/ptm/m/it/8 Chapter: His-to-grams\OT1/ptm/m/n/8 . [][]$https : / / root .
  cern . ch / root / htmldoc / guides /
  []
@@ -1332,74 +1301,89 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+[2pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.200 \end{document}
+l.204 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{figure.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.204 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{figure.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.200 \end{document}
+l.204 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{figure.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.200 \end{document}
+l.204 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{figure.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.200 \end{document}
+l.204 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{figure.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.200 \end{document}
-                     <./Imagenes/file2.pdf, page is rotated 90 degrees> <./Imag
-enes/file3.pdf, page is rotated 90 degrees> <./Imagenes/file4.pdf, page is rota
-ted 90 degrees> <./Imagenes/file5.pdf, page is rotated 90 degrees> <./Imagenes/
-file6.pdf, page is rotated 90 degrees>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 200.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 200.
+l.204 \end{document}
+                     <./Imagenes/file1.pdf, page is rotated 90 degrees> <./Imag
+enes/file2.pdf, page is rotated 90 degrees> <./Imagenes/file3.pdf, page is rota
+ted 90 degrees> <./Imagenes/file4.pdf, page is rotated 90 degrees> <./Imagenes/
+file5.pdf, page is rotated 90 degrees> <./Imagenes/file6.pdf, page is rotated 9
+0 degrees>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 204.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 204.
  (./vida_media_muon.aux
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 200.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 200.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 204.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 204.
 Package rerunfilecheck Info: File `vida_media_muon.out' has not changed.
 (rerunfilecheck)             Checksum: 682F53D05A2DB376C2C4B00CB560389B;347.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 31985 strings out of 481239
- 737285 string characters out of 5920376
- 1287612 words of memory out of 5000000
- 46603 multiletter control sequences out of 15000+600000
- 575924 words of font info for 123 fonts, out of 8000000 for 9000
+ 32013 strings out of 481239
+ 737544 string characters out of 5920376
+ 1290612 words of memory out of 5000000
+ 46617 multiletter control sequences out of 15000+600000
+ 579596 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,11n,127p,848b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr
-8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/times/utmri8a.pfb>
-Output written on vida_media_muon.pdf (2 pages, 180582 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
+es/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+
+Output written on vida_media_muon.pdf (2 pages, 215547 bytes).
 PDF statistics:
- 377 PDF objects out of 1000 (max. 8388607)
- 203 compressed objects within 3 object streams
- 20 named destinations out of 1000 (max. 500000)
+ 403 PDF objects out of 1000 (max. 8388607)
+ 225 compressed objects within 3 object streams
+ 23 named destinations out of 1000 (max. 500000)
  99 words of extra memory for PDF output out of 10000 (max. 10000000)
 

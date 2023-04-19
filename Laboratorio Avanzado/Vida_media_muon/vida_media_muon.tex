@@ -66,7 +66,7 @@
 \maketitle
 
 \begin{abstract}
-    
+    Se utilizaron los datos de un detector Cherenkov para encontrar pulsos dobles en cada uno de los eventos y aproximar el valor de la vida media de un muón. Para esta aproximación se utilizó un \textit{threshold} de $\mathbf{-800}$ para evitar el ruido y tener suficientes datos para el ajuste a una función exponencial.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -89,8 +89,10 @@
 %\section{Introducción}
     
 \section{Marco Teórico}
-    La radiación Cherenkov es un fenómeno que ocurre cuando partículas cargadas atraviezan un material en el cual la luz viaja más lento. Esto genera una "Onda de Choque" en forma de polarización y luz ultravioleta. Esta señal llega a los fotoreceptores que, por ley de Ohm, generan una corriente y voltaje que es posible medirse. Esos voltajes medidos a un 'ratio'/frecuencia constante son los datos proporcionados en los archivos \texttt{.paa}. Para que el medidor se active e inicie a la medición del evento, es necesario un voltaje de \textit{threshold}, en este caso es $-150$, mientras que para detectar los pulsos dobles, nosotros usaremos $-800$ de threshold, con esto es suficiente para generar un buen conjunto de datos.
+    La radiación Cherenkov es un fenómeno que ocurre cuando partículas cargadas atraviezan un material en el cual la luz viaja más lento. Esto genera una "Onda de Choque" en forma de polarización y luz ultravioleta. Esta señal llega a los fotoreceptores que, por ley de Ohm, generan una corriente y voltaje que es posible medirse. Esos voltajes medidos a un 'ratio'/frecuencia constante son los datos proporcionados en los archivos \texttt{.paa}. Para que el medidor se active e inicie a la medición del evento, es necesario un voltaje de \textit{threshold}, en este caso es $-150$, mientras que para detectar los pulsos dobles, nosotros usaremos $-800$ de threshold, con esto es suficiente para generar un buen conjunto de datos. \\
     
+   Este conjunto de datos se ajustará a una función exponencial gracias a la teoría de la desintegración, obedeciendo la siguiente ecuación
+	$$N(t) = N_o e^{-\lambda t}$$
 %\section{Diseño Experimental}
 
 
@@ -108,7 +110,7 @@
 
 Para este experimento se utilizó como guía el \textit{script} proporcionado por el catedrático al cual se le realizaron ciertos cambios. Se agregan 3 condicionales \texttt{if}, dado que lo que buscamos es tener únicamente los pulsos dobles, eliminamos el primer pulso del evento (al igual que los puntos cercanos, acotamos esto a una marca de tiempo menor a $20$) y nombramos una variable contador en $1$. Al seguir en el mismo evento, se establece el nuevo \textit{Threshold} en $-800$ y una marca de tiempo mayor a $100$, esto para evitar tomar datos de ruido. Y el tercer \texttt{if} muestra los datos en pantalla. \\
 
-Con esto se crea un \textit{script} que plotea el histograma y realiza el ajuste exponencial ("expo"). Con esto se obtienen las gráficas mostradas en resultados. Los códigos pueden ser encontrados junto con este \texttt{.pdf} o en el siguiente \href{https://github.com/DSarceno/Semestre9/tree/main/Laboratorio\%20Avanzado}{GitHub}.
+Con esto se crea un \textit{script} que plotea el histograma y realiza el ajuste exponencial ("expo"). Con esto se obtienen las gráficas mostradas en resultados. Los códigos pueden ser encontrados junto con este \texttt{.pdf} o en el siguiente \href{https://github.com/DSarceno/Semestre9/blob/master/Laboratorio\%20Avanzado/Vida_media_muon/Codigos}{GitHub}.
         
         
         
@@ -140,52 +142,54 @@ Con esto se crea un \textit{script} que plotea el histograma y realiza el ajuste
     
 \section{Discusión de Resultados}
 \begin{enumerate}
-    \item 
-  
+    \item Al ver la tabla \ref{table:tiempos}, podemos ver claramente un error bastante grande respecto al valor real de la vida media del muón. Esto puede ser por varias razones: el experimento en sí, la calidad de los datos o el \textit{threshold} que se utilizó para acotar y seleccionar bien bien los pulsos dobles. 
+    \item Como se mencionó, se escogió este \textit{threshold} para evitar a toda costa los datos de ruido y que fuera más eficiente el código, esto pudo causar cierto aumento en el error; sin embargo, la gráfica \ref{fig:file6}, \ref{fig:file2} y \ref{fig:file1} son las que más se asemejan (a la vista) a una exponencial y por ende, son las que presentan menor error.
+	\item Para las gráficas \ref{fig:file4} y \ref{fig:file5} que presentan datos un poco desproporcionados, se puede ver gráficamente que son datos aislados los que se escapan de la distribución.
+	\item Mientras que la gráfica \ref{fig:file5} presenta datos desproporcionados, estos no son justificables y puede pertenecer a alguna de las razones mencionadas en el primer inciso de esta sección.
 \end{enumerate}
 
 
 
 \section{Conclusiones}
 \begin{enumerate}
-    \item 
+    \item El efecto Cherenkov es viable para aproximar el valor medio de partículas cargadas; sin embargo, es necesario un buen equipo para evitar el ruido y un buen \textit{threshold} que nos permita suficientes datos para aproximar el valor pero evite los datos de ruido.
 \end{enumerate}
 %\section{Recomendaciones}
 
 \section{Anexos}
 		\begin{figure}[H]
             \centering
-            \includegraphics[scale=0.45]{./Imagenes/file1.pdf}
+            \includegraphics[scale=0.4]{./Imagenes/file1.pdf}
             \caption{Histograma del archivo de datos terminado en: $173703$}
             \label{fig:file1}
         \end{figure}  
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.45]{./Imagenes/file2.pdf}
+            \includegraphics[scale=0.4]{./Imagenes/file2.pdf}
             \caption{Histograma del archivo de datos terminado en: $174704$}
             \label{fig:file2}
         \end{figure} 
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.45]{./Imagenes/file3.pdf}
+            \includegraphics[scale=0.4]{./Imagenes/file3.pdf}
             \caption{Histograma del archivo de datos terminado en: $175704$}
             \label{fig:file3}
         \end{figure}  
         \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.45]{./Imagenes/file4.pdf}
+            \includegraphics[scale=0.4]{./Imagenes/file4.pdf}
             \caption{Histograma del archivo de datos terminado en: $180704$}
             \label{fig:file4}
          \end{figure} 
          \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.45]{./Imagenes/file5.pdf}
+            \includegraphics[scale=0.4]{./Imagenes/file5.pdf}
             \caption{Histograma del archivo de datos terminado en: $181704$}
             \label{fig:file5}
          \end{figure} 
          \begin{figure}[H]
             \centering
-            \includegraphics[scale=0.45]{./Imagenes/file6.pdf}
+            \includegraphics[scale=0.4]{./Imagenes/file6.pdf}
             \caption{Histograma del archivo de datos terminado en: $182704$}
             \label{fig:file6}
          \end{figure} 
