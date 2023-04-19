@@ -1,0 +1,54 @@
+\vspace{0.5cm}
+
+
+\section*{Problema 10}
+Sabemos que $\pdv{p}{z} = -g\rho = -g\frac{p}{RT}$; además, parauna atmosfera con potencial de temperatura uniforme
+	$$ \theta = \qty(\frac{p_o}{p})^\kappa T = \text{cte} = T_o, \quad \Rightarrow \quad T = T_o \qty(\frac{p}{p_o})^\kappa . $$
+Sustituyendo en lo anterior e integrando, se tiene
+	$$ \qty(p/p_o)^\kappa = -g\frac{\kappa z}{RT_o} + C, $$
+valuando $p(0) = p_o$ se tiene $C = 1$, entonces
+	$$ \boxed{p(z) = p_o \qty[1 - \frac{\kappa gz}{RT_o}]^{\frac{1}{\kappa}} .} $$
+	
+\section*{Problema 12}
+
+\begin{enumerate}[a)]
+	\item La temperatura del entorno crece de acuerdo a $\Gamma _d = \flatfrac{g}{c_p}$, por lo que la temperatura del paquete
+	$$ T_{p} = T_e (z) + \Gamma _d \delta z = T_e (z) + \frac{g}{c_p} \omega \delta t, $$
+dado que la temperatura del entorno varía linealmente, para una nueva altura $z - \delta z$
+	$$ T_e (z - \delta z) = T_e (z) - \dv{T_e}{z} \delta z = T_e (z) - \dv{T_e}{z} \omega \delta t. $$
+	
+
+El exceso de temperatura del paquete es
+	$$ \delta T = T_p - T_e (z - \delta z) = T_e (z) + \frac{g}{c_p} \omega \delta t - \qty(T_e (z) - \dv{T_e}{z} \omega \delta t) = \qty(\dv{T_e}{z} + \frac{g}{c_p})\omega \delta t \, \boxed{ = \Lambda _e \omega \delta t. } $$
+	
+	\item La pérdida de calor por unidad de volumen la podemos escribir como
+	$$ \delta \mathcal{Q} = \rho c_p \delta T = \rho c_p \Lambda _e \omega, $$
+	$$ \boxed{ \fdv{\mathcal{Q}}{t} = \rho c_p \Lambda _e \omega. } $$
+	
+Ahora
+	$$ \int _0 ^\infty \fdv{\mathcal{Q}}{t} \dd{z} = \int _0 ^\infty \rho c_p \Lambda _e \omega \dd{z}, $$
+haciendo un cambio de variables $\rho \dd{z} = -g^{-1} \dd{p}$
+	$$ = \int _{p_s} ^0 \frac{c_p}{g} \Lambda _e \omega \dd{p}. $$
+$\hfill \square$
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%

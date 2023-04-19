@@ -1,0 +1,51 @@
+\vspace{0.5cm}
+
+
+\section*{Problema 5}
+Por stephan-boltzmann se sabe que $\sigma T_n ^4$ en la n-ésima capa, en la superficie $\sigma T_s ^4$. Mientras que lo que se absorbe por la tierra está dado por $\frac{S_o}{4} (1 - \alpha) = \sigma T_e ^4$, entonces el input y output en la superficie está dado por: \textit{Input Sol} $+$ \textit{n-ésima capa} = \textit{output superficie}. Por lo que
+	$$ \sigma T_e ^4 + \sigma T_n ^4 = \sigma T_s ^4, $$
+	$$ T_e ^4 + T_n ^4 = T_s ^4, $$
+lo que implica forzosamente que $\boxed{T_n < T_s}$, para $n > 1$. \\
+
+Cada capa emite hacia arriba y hacia abajo y, por ende, recibe en ambas direcciones, este valor está dado por $2\sigma T_n ^4$. 
+	$$ 2T_n ^4 = T_{n + 1} ^4 + T_{n - 1} ^4. $$
+Por equilibrio, se tiene $T_1 = T_e$ ($T_1$ es la capa más alejada de la superfice). Para la última capa lo emitido es igual a lo recibido, entonces $T_2 = 2T_1 = 2T_e$. Usando lo del primer inciso se tiene que la diferencia de temperaturas entre capas es constate; además, es directo ver que $T_n ^4 = nT_1 ^4 = nT_e ^4$. Como queremos compararlo con la superficie, i.e. $n = N + 1$, sustituyendo
+	$$ \boxed{T_s = (N + 1) T_e .} $$
+	
+	
+\section*{Problema 6}
+Dado que el flujo disminuye conforme el cuadrado de la distancia, se tiene la siguiente relación
+	$$ \frac{S_v}{S_e} = \qty(\frac{r_e}{r_v})^2, \qquad S_v = \frac{1367}{0.72^2} = 2637 W\cdot m^{-2}. $$
+Entonces, la emisión de temperatura de Venus es
+	$$ T_e = \qty[\frac{S_v}{4\sigma} \qty(1 - \alpha _v)]^{1/4} = \boxed{227.4K.} $$
+	
+El número de capas está dado por la última ecuación encontrada el problema anterior, despejando $N$
+	$$ N = \qty(\frac{T_s}{T_e})^4 - 1 \approx \boxed{117.} $$
+Se necesitan $117$ capas para alcanzar dicha temperatura.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%

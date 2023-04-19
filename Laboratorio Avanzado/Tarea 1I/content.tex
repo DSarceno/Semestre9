@@ -1,0 +1,25 @@
+\vspace{0.5cm}
+
+\section*{Problema 1}
+\subsection*{"size.cpp"}
+Este es un programa simple en el cual se definen diferentes variables con diferentes tipos, como se muestra a continuación
+\begin{lstlisting}
+bool        boolVar;
+char        charVar;
+unsigned    unsignedVar;
+int         intVar;
+float       floatVar;
+\end{lstlisting}
+y se imprime la cantidad de Bytes utilizados por cada una de estas variables.
+
+\subsection*{"inter.cpp"}
+En este programa se asigna el tipo entero a las variables \texttt{Var1, Var2, Var3} y a cada una de ellas se le asignó un número en diferentes sistemas de numeración: binario ($0b11001111001010101011001100111010$), hexadecimal ($0xcf2ab33a$) y decimal ($-819285190$). Las cuales al imprimirlas se muestran en sistema decimal. El siguiente output muestra la reinterpretacion de la variable 1. Se realiza la conversión de tipo entero a flotante. También se muestra que las variables pueden ser booleanos con cualquier valor como \textit{True} y cero como \textit{False}. Y que  la asignación de variables hexadesimales o binarias funcionan con otros tipos de variables solo que teniendo cuidado con el número de bits.
+
+\section*{Problema 2}
+El complemento a dos de un número $N$ expresado en un sistema binario con $n$ dígitos esta dado por $C_2 (N) = 2^n - \abs{N}$. Utilizando la fórmula mostrada y un conversor de \href{https://www.rapidtables.org/convert/number/decimal-to-binary.html}{decimal a binario}, entonces
+\begin{description}
+	\item[-125: ] $C_2 (-125) = 2^{32} - 125 = 4294967171 \quad \tensor[_{10}]{\rightarrow}{_{2}} \quad 11111111111111111111111110000011$.
+	\item[-4096: ] $C_2 (-4096) = 2^{32} - 4096 = 4294963200 \quad \tensor[_{10}]{\rightarrow}{_{2}} \quad 11111111111111111111000000000000$.
+	\item[-1000000: ] $C_2 (-1000000) = 2^{32} - 1000000 = 4293967296 \quad \tensor[_{10}]{\rightarrow}{_{2}} \quad 11111111111100001011110111000000$.
+\end{description}
+Claramente esta en representación de $32$ bits y el bit más significativo es $1$ que representa el "$-$".

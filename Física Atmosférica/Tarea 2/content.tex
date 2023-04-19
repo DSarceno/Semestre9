@@ -1,0 +1,47 @@
+\vspace{0.5cm}
+
+
+\section*{Problema 3}
+\textit{(a)} Para una atmósfera isotérmica en balance hidrostático
+\begin{equation}
+	\pdv{p}{z} = -\frac{p}{H} \qquad \Rightarrow \qquad p(z) = p(0) e^{-\frac{z}{H}}, \label{presion}
+\end{equation}
+con los datos proporcionados $H = 7.7km$. Entonces, la masa $M(z)$ que hay sobre el nivel $z$ es
+	$$ M(z) = \int _z ^\infty \rho \dd{z} = \int _z ^\infty -\frac{1}{g} \pdv{p}{z} \dd{z} = \frac{p(z)}{g}. $$
+Entonces, para $M(z) = \frac{M(0)}{2}$ por lo que $p(z) = p(0)/2 = \boxed{500hPa.}$ Ahora, tomando \eqref{presion} se despeja $z$
+	$$ z = H\ln{\frac{p(0)}{p(z)}} = H\ln{2} = \boxed{5.34km.} $$
+Y para la densidad
+	$$ \rho (z) = \frac{p(z)}{RT_o} = \boxed{0.662kg/m^3 .} $$
+\textit{(b)} Para la capa en la que se tiene un $90\%$ de masa debajo. Entonces, tomando lo hecho en el inciso anterior, se tiene $M(z) = 0.1M(0) \, \Rightarrow \, p(z) = 0.1p(0) = \boxed{100hPa}$. Por lo que $z = H \ln{10} = \boxed{17.7km}$ y la densidad $\rho (z) = p(z)/RT = \boxed{0.1324kg/m^3 .}$
+	
+\section*{Problema 5}
+Dada la función de densidad de vapor $\rho _v (z) = \rho _{\text{surf}} e^{-z/b}$ con $b\sim 3km$. La atmósfera se vuelve transparente a la radiación terrestre a una altura $z'$
+	$$ 3kg/m^2 = \int _{z'} ^\infty \rho _v (z) \dd{z} = b\rho _{\text{surf}} e^{-z/b}, $$
+se despeja $z'$
+	$$ z' = b\ln{\abs{\frac{b\rho _{\text{surf}}}{3}}} = \boxed{6.9km .} $$
+
+Dada la gráfica $Fig. 3.1.$ (Plumb y Marshall) la temperatura es aproximadamente $\boxed{T\sim 245K .}$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%
