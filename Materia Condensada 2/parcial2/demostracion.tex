@@ -18,7 +18,7 @@
 \usepackage{lipsum} % texto de relleno
 \usepackage{cite}
 \author{Diego Sarceño \\ \footnotesize{201900109}}
-\title{Parcial 1 \\ \footnotesize{Materia Condensada 2}}
+\title{Parcial 2 \\ \footnotesize{Materia Condensada 2}}
 %\setbeamercovered{transparent} 
 %\setbeamertemplate{navigation symbols}{} 
 %\logo{} 
@@ -49,7 +49,7 @@
 				B(x) = B_a \frac{\cosh{\flatfrac{x}{\lambda}}}{\cosh{\flatfrac{\delta}{2\lambda}}}, \label{bx}
 			\end{equation}
 		donde $B_a$ es el campo fuera de la placa y paralelo a ella; $x = 0$ es en el centro de la placa.}
-		\onslide<3->{\item La magnetización efectiva $M(x)$ en el plato está definida por $B(x) - B_a = 4\pi M(x)$. Demuestre, en CGS, que $4\pi M(x) = -B_a (1/8\lambda ^2)(\delta ^2 - 4x^2)$, para $\delta \ll \lambda$.}
+		\onslide<3->{\item La magnetización efectiva $M(x)$ en la placa está definida por $B(x) - B_a = 4\pi M(x)$. Demuestre, en CGS, que $4\pi M(x) = -B_a (1/8\lambda ^2)(\delta ^2 - 4x^2)$, para $\delta \ll \lambda$.}
 	\end{enumerate}
 
 }
@@ -77,7 +77,7 @@
 	\frametitle{Capítulo 10 Problema 1 Solución}
 	\onslide<1->{\textit{(b)} Para encontrar la magnetización efectiva y tomar en cuenta que $\lambda \gg \delta$, expandimos en taylor los cosenos hiperbólicos
 		$$ \cosh{x/\lambda} = 1 + \frac{x^2}{2\lambda ^2} + \cdots $$
-		$$ \cosh{\delta /2\lambda} = 1 + \frac{1}{2} \frac{\delta ^2}{4\lambda} + \cdots . $$}
+		$$ \cosh{\delta /2\lambda} = 1 + \frac{1}{2} \frac{\delta ^2}{4\lambda ^2} + \cdots . $$}
 	\onslide<2->{Con esto, se toman los primeros términos y se sustituyen en la ecuación \eqref{bx}
 		$$ B(x) = B_a \frac{1 + \frac{x^2}{2\lambda}}{1 + \frac{\delta ^2}{8\lambda ^2}} = B_a \frac{4(2\lambda ^2 + x^2)}{\delta ^2 + 8\lambda ^2}. $$}
 	\onslide<3->{Reemplazamos esto en la definición de magnetización efectiva
@@ -115,7 +115,7 @@
 
 \frame{
 	\frametitle{Capítulo 16 Problema 3 Enunciado}
-	\textbf{Efecto de un espacio de aire. } Discuta el efecto de un espacio de aire entre las placas de unin measurement capacitor y un dielectrico en la medición de constantes dieléctricas grandes. Cuál es la constante dieléctrica aparente más grande posible si el espacio de aire tiene un espesor de $10^{-3}$ del total del espesor? La presencia de espacios de aire pueden distorcionar la medición de constantes dieléctricas grandes.
+	\textbf{Efecto de un espacio de aire. } Discuta el efecto de un espacio de aire entre las placas de un capacitor y un dielectrico en la medición de constantes dieléctricas grandes. Cuál es la constante dieléctrica aparente más grande posible si el espacio de aire tiene un espesor de $10^{-3}$ del total del espesor? La presencia de espacios de aire pueden distorcionar la medición de constantes dieléctricas grandes.
 	
 	\begin{figure}[H]
 		\centering

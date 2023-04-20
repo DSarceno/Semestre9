@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.19)  18 APR 2023 14:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.12.19)  19 APR 2023 20:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1054,10 +1054,10 @@ Package rerunfilecheck Info: File `demostracion.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 20800 strings out of 481239
- 391164 string characters out of 5920376
+ 20802 strings out of 481239
+ 391180 string characters out of 5920376
  821208 words of memory out of 5000000
- 35497 multiletter control sequences out of 15000+600000
+ 35499 multiletter control sequences out of 15000+600000
  540667 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,16n,68p,796b,666s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1074,7 +1074,7 @@ onts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 >
-Output written on demostracion.pdf (18 pages, 198608 bytes).
+Output written on demostracion.pdf (18 pages, 198867 bytes).
 PDF statistics:
  585 PDF objects out of 1000 (max. 8388607)
  531 compressed objects within 6 object streams
