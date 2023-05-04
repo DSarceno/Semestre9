@@ -1,9 +1,45 @@
 \vspace{0.5cm}
 
 
-\lipsum[1-10]
+\section*{Síntesis}
+
+Este artículo nace de ciertos problemas en el modelo del clima de Lorentz, el hecho de que de condiciones inciales muy parecidas se obtengan resultados muy diferentes. De esto nace su artículo, y para estudiar esto, Lorenz trabajó en el espacio de fase y definió ciertos conceptos para llegar al teorema que explica sus problemas. \\
+
+Primero, asumimos que todas las trayectorias posibles estan acotadas dentro de una región $R$ en el espacio de fase. Dado esto, debe existir un punto límite, uno al que se aproxime arbitrariamente con una velocidad arbitraria. Entonces, para $P(t)$ todo punto límite de la trayectoria que pasa por $P_o$ es un punto límite, y el conjunto de todos los puntos límites de la trayectoria $P(t)$ es llamado \textit{trayectoria límite}. Y si una trayectoria está contendia entre sus propias trayectorias límite se le denomina \textit{"central"}. \\
+
+Una trayectoria se dice \textit{estable} si cualquier otra trayectoria que pase cerca de ella en un punto, se mantenga cerca conforme avanza el tiempo. Y, tomando la idea pura, una trayectorial es \textit{periódica} si pasa por un punto por el que ya paso, y \textit{cuasi-periódica} si pasa arbitrariamente cerca por un punto que ya pasó. De modo que se tiene lo siguiente
+
+$$  
+	\text{Trayectorias} \left\{\begin{array}{c}
+		\text{Límite} \\
+		\text{Estables} \\
+		\text{Periódicas}
+	\end{array}\right.
+$$
+
+Con todo esto, es posible enunciar el teorema. Este enuncia que toda trayectoria con una trayectoria de límite estable es cuasi-periódica. Esto justamente nos indica que dos estados distintos por una diferencia imperceptible, pueden evolucionar en dos estados considerablemete diferentes. Por lo que el intentar realizar una predicción aceptable es prácticamente imposible. \\
+
+Todo lo anterior junto con las ecuaciones de Saltzman se llega a un conjunto de ecuaciones lineales simples que busca modelar las celdas de convección en la atmósfera terrestre. Estas ecuaciones, al ser un conjunto no lineal que dan introducción a lo que más adelante se llamaría \textit{Atractor de Lorenz}. Esto produce un curioso patron cuando se grafica en tres dimensiones llamado en ingles como \textit{strange-atractor}. La forma del atractor de Lorenz es bastante compleja y parecida a un fractal. \\
+
+Lorenz descubrió que su atractor y el caos representa implicaciones importantes en el campo de dinámica no lineal ya que puso a prueba el hecho de que todos los sistemas físicos pueden ser modelados con ecuaciones lineales simples, volviendose este, un ejemplo clásico de un sistema caótico. Esto demuestra la importancia de los modelos matemáticos en entender los fenómenos naturales complejos y demuestra el potencial de la teoría del caos para proporcionar nuevos conocimientos sobre el comportamiento de estos sistemas. Asimismo menciona que en 10 o 100 años esto pueda tener una gran implicación en el área de meteorología cuando ya se tengan más avances en ello.
 
 
+
+
+
+
+
+\section*{¿Qué aprendí del artículo?}
+
+La cultura popular y las típicas frases de psicología positiva han popularizado el título de una charla de Edward Lorenz en 1972 en el MIT, "Does the flap of a butterfly's wings in Brazil set off a tornado in Texas?". Sin embargo, el mismo Lorenz aclaró lo absurda que es esta idea si se toma literal, simplemente es para ejemplificar la sensitividad a las condiciones iniciales. Además, que una de las imagenes que más famosas con el tema del caos es el atractor de lorenz.\\
+
+A lo largo de la carrera he estado muy interesado en la parte de programación y, como es de esperarse en ese ámbito, uno llega a ese conocido sistemas de ecuaciones que en wikipedia exponen de una forma muy simple. Resolver dicho sistema de ecuaciones resulta entretenido, más por la parte de la graficación, es bonito hacer eso por cuenta propia; sin embargo, en esos momentos no se conocía el significado de cada una de las constantes, ni de donde provenían, ni mucho menos su interpretación e importancia en las áreas pertinentes. \\
+
+Este sistema de ecuaciónes es un modelo simplificado del clima, que se basa en explicar el flujo de un fluído, en este caso el aire, de una zona caliente a una fría. Estas dependen de ciertas constantes, como $\sigma$ que es el \textit{número de Prandtl}, $r$ que depende de la razón entre el \textit{número de Rayleigh} y su valor crítico y $b$ que depende de un parámetro $a$. Esto explica esas nubes interesantes llamadas "roll clouds", que son patrones en el cielo como si fueran reductores de velocidad inmensos. \\
+
+Ahora, analizando un poco más a detalle el atractor de lorenz, al momento de probar distintas condiciones iniciales se tiene siempre la misma forma (a grandes rasgos); sin embargo, analizando dos sistemas con condiciones iniciales muy parecidas y  calculando la distancia entre cada uno de los puntos para el mismo instante de tiempo, se ve claramente un momento en el que la distancia se vuelve totalmente impredecible. Es lo esperado, pero qué interpretación se le da a esto? Por qué, según Lorenz, esto tendría una gran implicación en el futuro? \\
+
+El tiempo en el que las soluciones tienen una distancia prácticamente nula es el tiempo en que las predicciones meteorológicas tienen sentido. Mientras que en el momento en el que se vuelve impredecible, ya no tiene sentido la predicción. Investigando un poco, este periodo de confiabilidad se promedia entre $5$ y $10$ días, fuera de ese periodo, si la predicción es que lloverá, no lleve paraguas. Esto se puede perfeccionar un poco, haciendo un promedio de predicciones, tomando una gama de condiciones iniciales válidas, hacer un bosquejo de los posibles resultados; sin embargo, por las características del problema, nunca se tendrá una solución mucho más precisa que la que ya se tiene. Esto es análogo al principio de incertidumbre de Heisenberg, algo natural y no dependiente de los instrumentos de medición.
 
 
 
