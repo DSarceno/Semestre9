@@ -44,7 +44,7 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-\title{Rutherford \\
+\title{Experimento de Dispersión de Rutherford \\
 {\footnotesize \scshape{Reporte 2}}
 }
 
@@ -66,11 +66,11 @@
 \maketitle
 
 \begin{abstract}
-    Se utilizaron los datos de un detector Cherenkov para encontrar pulsos dobles en cada uno de los eventos y aproximar el valor de la vida media de un muón. Para esta aproximación se utilizó un \textit{threshold} de $\mathbf{-800}$ para evitar el ruido y tener suficientes datos para el ajuste a una función exponencial.
+    En este artículo se presentan los resultados de simular en el software de GEANT4 el experimento de Rutherford. Estos resultados se comparan con otras simulaciones para obtener una media de mediciones en cada uno de los detectores. Y compararlo con lo que ahora ya se conoce.
 \end{abstract}
 
 \begin{IEEEkeywords}
-	Cherenkov, root, histogramas, vida media, muón.
+	Dispersión, Rutherford, modelos atómicos.
 \end{IEEEkeywords}
 
 %\section{Objetivos}
@@ -89,10 +89,25 @@
 %\section{Introducción}
     
 \section{Marco Teórico}
-    La radiación Cherenkov es un fenómeno que ocurre cuando partículas cargadas atraviezan un material en el cual la luz viaja más lento. Esto genera una "Onda de Choque" en forma de polarización y luz ultravioleta. Esta señal llega a los fotoreceptores que, por ley de Ohm, generan una corriente y voltaje que es posible medirse. Esos voltajes medidos a un 'ratio'/frecuencia constante son los datos proporcionados en los archivos \texttt{.paa}. Para que el medidor se active e inicie a la medición del evento, es necesario un voltaje de \textit{threshold}, en este caso es $-150$, mientras que para detectar los pulsos dobles, nosotros usaremos $-800$ de threshold, con esto es suficiente para generar un buen conjunto de datos. \\
-    
-   Este conjunto de datos se ajustará a una función exponencial gracias a la teoría de la desintegración, obedeciendo la siguiente ecuación
-	$$N(t) = N_o e^{-\lambda t}$$
+\subsection{Experimento de Dispersión de Rutherford}
+El experimento de dispersión de Rutherford fue concebido por Ernest Rutherford para determinar si el modelo de Thompson  (u otros existentes) describía correctamente al átomo. Este experimento consiste en lanzar partículas cargadas eléctricamente hacia un objetivo y observar cómo es que estas partículas se dispersan al interaccionar, por medio de la fuerza de Coulomb, con los átomos del material del que está hecho el objetivo. \\
+
+EL experimento de Rutherford finalmente se concretó como una serie de experimentos, en la versión final de estos, se lanzaron partículas alfa provenientes de la desintegración radiactiva de radón$-222$ en forma de n fino haz obtenido por medio de un colimador. El objetivo se lanzaba este haz fue una lámina de oro de $2\mu m$ de grosor. Para observar la dispersión, se colocaba una pantalla fluorescente que brillaba al ser impactada por una partícula alfa. Todos los elementos: emisor de partículas, objetivo y pantalla eran colocados dentro de un tubo sellado al que se extraría el aire creando un vacío. \\
+
+En base a los datos obtenidos de los experimentos, el mismo Rutherford propuso otro modelo, el modelo de Rutherford, en el cual los electrones orbitan alrededor de un núcleo compacto y muy masivo de carga positiva, de la misma forma en que los planetas orbitan alrededor del sol, razón por la cual este modelo fue llamado "modelo planetario del átomo".
+
+
+\subsection{Fórmula de Dispersión de Rutherford}
+La dispersión de partículas alfa de los núcleos, se puede modelar a partir de la fuerza de Coulomb y tratarla como una órbita. Para un detector en un ángulo específico con respecto al haz incidente, el número de partículas por unidad de área que golpean el detector está dada por la fórmula de Rutherford: 
+\begin{equation}
+	N(\theta) = \frac{ N_i nLZ^2 k^2 e^4 }{ 4r^2 E_c ^2 \sin ^4 {\flatfrac{\theta}{2}} }. \label{Ntheta}
+\end{equation}
+
+Para obtener la fracción dispersada, la fórmula anterior incluye la sección transversal de dispersión para el núcleo dado. Otra forma de la ecuación de Rutherford es solamente la sección transversal diferencial.
+\begin{equation}
+	\dv{\sigma}{\cos{\theta}} = \qty(\frac{1}{4\pi \varepsilon _o} \frac{Z_1 Z_2 e^2}{4E_o})^2 \frac{1}{\sin ^4 {\flatfrac{\theta}{2}}}
+\end{equation}
+
 %\section{Diseño Experimental}
 
 
@@ -108,51 +123,255 @@
 %            \item 
 %        \end{enumerate}
 
-Para este experimento se utilizó como guía el \textit{script} proporcionado por el catedrático al cual se le realizaron ciertos cambios. Se agregan 3 condicionales \texttt{if}, dado que lo que buscamos es tener únicamente los pulsos dobles, eliminamos el primer pulso del evento (al igual que los puntos cercanos, acotamos esto a una marca de tiempo menor a $20$) y nombramos una variable contador en $1$. Al seguir en el mismo evento, se establece el nuevo \textit{Threshold} en $-800$ y una marca de tiempo mayor a $100$, esto para evitar tomar datos de ruido. Y el tercer \texttt{if} muestra los datos en pantalla. \\
+El experimento se basa en simular el lanzamiento de un haz de $N$ partículas alfa hacia una lámina muy delgada de oro. El haz tiene un radio de $1mm$ y las trayectorias de las partículas dentro de este son perfectamente paralelas, pero la distancia a partir del centro es aleatoria (ver figura \ref{haz}). Las partículas del haz, con energía de $5.5 MeV$ inciden perpendicularmente en la lámina de oro de un grosor de $10^{-6} m$. 
 
-Con esto se crea un \textit{script} que plotea el histograma y realiza el ajuste exponencial ("expo"). Con esto se obtienen las gráficas mostradas en resultados. Los códigos pueden ser encontrados junto con este \texttt{.pdf} o en el siguiente \href{https://github.com/DSarceno/Semestre9/blob/master/Laboratorio\%20Avanzado/Vida_media_muon/Codigos}{GitHub}\footnote{El archivo de lectura es el llamado \texttt{modReadPAA.C} y el que realiza el histograma es el archivo \texttt{hist.C}.}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.35]{Imagenes/haz.png}
+	\caption{Haz de partículas alfa.}
+	\label{haz}
+\end{figure}
+
+Para cada partícula en la simulación, se considerarán las interacciones que estas tienen con el material del objetivo para determinar la trayectoria que debe seguir al momento de alcanzarlo. Se colocan $10$ detectores que cuenta el paso de partículas alfa con el fin de determinar cuántas de las partículas que inciden en el objetivo se dispersan a un ángulo $\Theta$ respecto de la trayectoria original del haz. Cada detector tiene un área efectiva de $4 cm^2$ y estan dispuestos sobre un círculo centrado en el punto de impacto del haz con el material. Los detectores se encuentran a intervalos de $15^o$ entre $0^o$ y $135^o$ (ver figura \ref{montaje}).
         
-        
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.3]{Imagenes/montaje.png}
+	\caption{Montaje experimental de la simulación.}     
+	\label{montaje}   
+\end{figure}
         
         
 \section{Resultados}
-    Las gráficas se muestran en la sección de anexos. El valor real de la vida media del muón es $2.2\mu s$, se compararan los valores encontrados por el ajuste exponencial con el valor real. La escala de tiempo es de $8ns$.
-    \begin{table}[H]
-    	\centering
-    	\caption{Tabla de tiempos (Vida Media del Muon)}
-		\label{table:tiempos}
-		\begin{tabular}{||c||c|c|c||}
-			\hline
-			\hline
-			File & Media $\pm$ Std   & $t\pm \Delta t\, [\mu s]$ & $\% E$      \\
-			\hline
-			\hline
-			$1$    & $355.6 \pm 218.5$ & $2.84 \pm 1.75$         & $29\%$    \\
-			$2$    & $347.4 \pm 201.8$ & $2.78\pm 1.61$          & $26.3\%$  \\
-			$3$    & $387.5 \pm 244.5$ & $3.1\pm 1.96$           & $40.9\%$  \\
-			$4$    & $410.3\pm 238.6$  & $3.28\pm 1.91$          & $49\%$    \\
-			$5$    & $410.2\pm 226.9$  & $3.28\pm 1.82$          & $49\%$    \\
-			$6$    & $331.6\pm 205.7$  & $2.65\pm 1.64$          & $20.45\%$ \\
-			\hline
-			\hline
-		\end{tabular}
-	\end{table}
+
+\begin{table}[H]
+	\centering
+	\caption{Primera Simulación}
+	\begin{tabular}{||c|c||}
+	\hline
+	\hline
+	\multicolumn{2}{||c||}{Run $1$} \\
+	\hline
+	\hline
+	Ángulo del Detector & Mediciones \\
+	\hline
+	$0^o$   & $28192468$ \\
+	$15^o$  & $5202$     \\
+	$30^o$  & $295$      \\ 
+	$45^o$  & $52$       \\
+	$60^o$  & $16$       \\
+	$75^o$  & $9$        \\
+	$90^o$  & $0$        \\
+	$105^o$ & $3$        \\
+	$120^o$ & $4$        \\
+	$135^o$ & $2$        \\
+	\hline
+	\hline
+	\end{tabular}
+\end{table}
+
+
+
+\begin{table}[H]
+	\centering
+	\caption{Segunda Simulación}
+	\begin{tabular}{||c|c||}
+	\hline
+	\hline
+	\multicolumn{2}{||c||}{Run $2$} \\
+	\hline
+	\hline
+	Ángulo del Detector & Mediciones \\
+	\hline
+	$0^o$   & $28194414$ \\
+	$15^o$  & $5231$     \\
+	$30^o$  & $299$      \\ 
+	$45^o$  & $58$       \\
+	$60^o$  & $12$       \\
+	$75^o$  & $9$        \\
+	$90^o$  & $1$        \\
+	$105^o$ & $2$        \\
+	$120^o$ & $2$        \\
+	$135^o$ & $1$        \\
+	\hline
+	\hline
+	\end{tabular}
+\end{table}
+
+
+
+
+\begin{table}[H]
+	\centering
+	\caption{Tercera Simulación}
+	\begin{tabular}{||c|c||}
+	\hline
+	\hline
+	\multicolumn{2}{||c||}{Run $3$} \\
+	\hline
+	\hline
+	Ángulo del Detector & Mediciones \\
+	\hline
+	$0^o$   & $28187047$ \\
+	$15^o$  & $5307$     \\
+	$30^o$  & $314$      \\ 
+	$45^o$  & $60$       \\
+	$60^o$  & $18$       \\
+	$75^o$  & $11$        \\
+	$90^o$  & $5$        \\
+	$105^o$ & $3$        \\
+	$120^o$ & $0$        \\
+	$135^o$ & $3$        \\
+	\hline
+	\hline
+	\end{tabular}
+\end{table}
+
+
+
+
+
+\begin{table}[H]
+	\centering
+	\caption{Cuarta Simulación}
+	\begin{tabular}{||c|c||}
+	\hline
+	\hline
+	\multicolumn{2}{||c||}{Run $4$} \\
+	\hline
+	\hline
+	Ángulo del Detector & Mediciones \\
+	\hline
+	$0^o$   & $28190247$ \\
+	$15^o$  & $5393$     \\
+	$30^o$  & $295$      \\ 
+	$45^o$  & $46$       \\
+	$60^o$  & $26$       \\
+	$75^o$  & $11$        \\
+	$90^o$  & $6$        \\
+	$105^o$ & $1$        \\
+	$120^o$ & $1$        \\
+	$135^o$ & $1$        \\
+	\hline
+	\hline
+	\end{tabular}
+\end{table}
+
+
+
+
+\begin{table}[H]
+	\centering
+	\caption{Quinta Simulación}
+	\begin{tabular}{||c|c||}
+	\hline
+	\hline
+	\multicolumn{2}{||c||}{Run $5$} \\
+	\hline
+	\hline
+	Ángulo del Detector & Mediciones \\
+	\hline
+	$0^o$   & $28192468$ \\
+	$15^o$  & $5202$     \\
+	$30^o$  & $295$      \\ 
+	$45^o$  & $52$       \\
+	$60^o$  & $16$       \\
+	$75^o$  & $9$        \\
+	$90^o$  & $0$        \\
+	$105^o$ & $3$        \\
+	$120^o$ & $4$        \\
+	$135^o$ & $2$        \\
+	\hline
+	\hline
+	\end{tabular}
+\end{table}
+
+
+
+
+
+
+\begin{table}[H]
+	\centering
+	\caption{Sexta Simulación}
+	\begin{tabular}{||c|c||}
+	\hline
+	\hline
+	\multicolumn{2}{||c||}{Run $6$} \\
+	\hline
+	\hline
+	Ángulo del Detector & Mediciones \\
+	\hline
+	$0^o$   & $28192468$ \\
+	$15^o$  & $5202$     \\
+	$30^o$  & $295$      \\ 
+	$45^o$  & $52$       \\
+	$60^o$  & $16$       \\
+	$75^o$  & $9$        \\
+	$90^o$  & $0$        \\
+	$105^o$ & $3$        \\
+	$120^o$ & $4$        \\
+	$135^o$ & $2$        \\
+	\hline
+	\hline
+	\end{tabular}
+\end{table}
+    
+    
+    
+   
+\begin{table}[H]
+	\centering
+	\caption{Promedio y Desviación Estandar}
+	\begin{tabular}{||c|c|c||}
+	\hline
+	\hline
+	Ángulo del Detector & Promedio & Std \\
+	\hline
+	$0^o$   & $28191519$ & $2557$ \\
+	$15^o$  & $5256$     & $78$ \\
+	$30^o$  & $299$      & $7$ \\ 
+	$45^o$  & $53$       & $5$ \\
+	$60^o$  & $17$       & $4$ \\
+	$75^o$  & $10$        & $1$ \\
+	$90^o$  & $2$        & $3$ \\
+	$105^o$ & $2.5$        & $1$ \\
+	$120^o$ & $2$        & $1.5$ \\
+	$135^o$ & $2$        & $0.75$ \\
+	\hline
+	\hline
+	\end{tabular}
+\end{table}
+    
+    
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{./Codigos/Ajuste.pdf}
+	\caption{Ajuste de las medias de los datos obtenidos.}
+	\label{ajuste}
+\end{figure}
+
+
+
     
     
     
 \section{Discusión de Resultados}
 \begin{enumerate}
-    \item Al ver la tabla \ref{table:tiempos}, podemos ver claramente un error bastante grande respecto al valor real de la vida media del muón. Esto puede ser por varias razones: el experimento en sí, la calidad de los datos o el \textit{threshold} que se utilizó para acotar y seleccionar bien bien los pulsos dobles. 
-    \item Como se mencionó, se escogió este \textit{threshold} para evitar a toda costa los datos de ruido y que fuera más eficiente el código, esto pudo causar cierto aumento en el error; sin embargo, la gráfica \ref{fig:file6}, \ref{fig:file2} y \ref{fig:file1} son las que más se asemejan (a la vista) a una exponencial y por ende, son las que presentan menor error.
-	\item Para las gráficas \ref{fig:file4} y \ref{fig:file5} que presentan datos un poco desproporcionados, se puede ver gráficamente que son datos aislados los que se escapan de la distribución.
-	\item Mientras que la gráfica \ref{fig:file5} presenta datos desproporcionados, estos no son justificables y puede pertenecer a alguna de las razones mencionadas en el primer inciso de esta sección.
+    \item Relacionado con las detecciones de partículas, se desmonta, claramente, el modelo atómico de Thompson. Los datos esperados eran más aleatorios en todas direcciónes luego de pasar a travez de la lámina de oro, cosa que no sucede. Se tiene un $28\%$ de las mediciones a un ángulo llano, cosa que muestra que el átomo está compuesto, en su mayoría, de espacio vacío.
+    \item El hecho de que existan pequeñas mediciones a más de $90^o$ significa que existen pequeños pedazos dentro del espacio vacío con una gran concentración de carga que provocan el choque.
+    \item El hecho de que solo se tengan mediciones de un $~28\%$ del total de las partículas lanzadas puede deberse a muchos factores, a que el espacio cubierto por los medidores no es tan grande, a que la simulación no toma todas las condisderaciones físicas o, simplemente, $100M$ no es la cantidad adecuada de partículas.
 \end{enumerate}
 
 
 
 \section{Conclusiones}
 \begin{enumerate}
-    \item El efecto Cherenkov es viable para aproximar el valor medio de partículas cargadas; sin embargo, es necesario un buen equipo para evitar el ruido y un buen \textit{threshold} que nos permita suficientes datos para aproximar el valor pero evite los datos de ruido.
+    \item El átomo es en su mayoría espacio vacío y el núcleo es carga positiva confinada.
+    \item El modelo planetario del átomo propuesto por Rutherford es, según este experimento, el que mejor modela la realidad.
+    \item El software GEANT4 es una gran herramienta para la simulación de eventos en física atómica y de partículas. Y siempre es necesario realizar más simulaciones o iteraciones por simulación para obtener lo más cercano a la realidad.
 \end{enumerate}
 %\section{Recomendaciones}
 
@@ -198,7 +417,8 @@ Con esto se crea un \textit{script} que plotea el histograma y realiza el ajuste
         
         
 \begin{thebibliography}{00}
-\bibitem{b2} \textit{Chapter: Histograms}. \url{https://root.cern.ch/root/htmldoc/guides/users-guide/Histograms.html}
+\bibitem{b1} Beiser, A. (1968). \textit{Modern Physics: an introductory survey}. Addison-Wesley Publishing Company.
+\bibitem{b2} \textit{Rutherford Scattering} \url{http://hyperphysics.phy-astr.gsu.edu/hbasees/rutsca.html}
 \end{thebibliography}
 
 \end{document}

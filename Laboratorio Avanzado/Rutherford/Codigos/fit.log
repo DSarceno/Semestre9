@@ -1,0 +1,27 @@
+
+
+*******************************************************************************
+Mon May 22 13:12:46 2023
+
+
+FIT:    data read from "data.dat" u 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = A/((sin(x/2))**4)
+fitted parameters initialized with current variable values
+
+
+Current data point
+=========================
+#               = 1 out of 10
+x               = 1              
+z               = 2.81915e+07    
+
+Current set of parameters
+=========================
+A               = 1              
+
+BREAK: Undefined value during function evaluation
